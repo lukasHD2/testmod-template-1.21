@@ -28,7 +28,8 @@ public class ModItemGroups {
                     .entries((displayContext, entries) -> {
                         entries.add(ModBlocks.PINK_GARNET_BLOCK);
                         entries.add(ModBlocks.RAW_PINK_GARNET_BLOCK);
-                        entries.add(ModBlocks.SMARTPHONE);
+                        entries.add(ModBlocks.DICE_BLOCK);
+                        entries.add(ModBlocks.TINY_CUBE_BLOCK);
                     }).build());
 
     public static void registerItemGroups(){

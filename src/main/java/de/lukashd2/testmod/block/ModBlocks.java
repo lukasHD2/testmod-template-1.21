@@ -21,8 +21,13 @@ public class ModBlocks {
             new Block(AbstractBlock.Settings.create().strength(4f)
                     .requiresTool().sounds(BlockSoundGroup.AMETHYST_BLOCK)));
 
-    public static final Block SMARTPHONE = registerBlock("smartphone",
-            new Block(AbstractBlock.Settings.create().nonOpaque()));
+    public static final Block DICE_BLOCK = registerBlock("dice_block",
+            new Block(AbstractBlock.Settings.create().strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.GRASS)));
+
+    public static final Block TINY_CUBE_BLOCK = registerBlock("tiny_cube_block",
+            new Block(AbstractBlock.Settings.create().nonOpaque().strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);
@@ -40,7 +45,8 @@ public class ModBlocks {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
             entries.add(PINK_GARNET_BLOCK);
             entries.add(RAW_PINK_GARNET_BLOCK);
-            entries.add(SMARTPHONE);
+            entries.add(DICE_BLOCK);
+            entries.add(TINY_CUBE_BLOCK);
         });
     }
 }
