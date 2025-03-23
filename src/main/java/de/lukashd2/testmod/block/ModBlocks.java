@@ -26,7 +26,7 @@ public class ModBlocks {
                     .requiresTool().sounds(BlockSoundGroup.GRASS)));
 
     public static final Block TINY_CUBE_BLOCK = registerBlock("tiny_cube_block",
-            new Block(AbstractBlock.Settings.create().nonOpaque().strength(4f)
+            new TinyCubeLightBlock(AbstractBlock.Settings.create().nonOpaque().strength(4f)
                     .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
     private static Block registerBlock(String name, Block block){
