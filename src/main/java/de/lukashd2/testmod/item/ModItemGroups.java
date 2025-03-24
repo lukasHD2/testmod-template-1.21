@@ -30,6 +30,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.RAW_PINK_GARNET_BLOCK);
                         entries.add(ModBlocks.DICE_BLOCK);
                         entries.add(ModBlocks.TINY_CUBE_BLOCK);
+                        entries.add(ModBlocks.LITHIUM_ORE);
                     }).build());
 
     public static void registerItemGroups(){

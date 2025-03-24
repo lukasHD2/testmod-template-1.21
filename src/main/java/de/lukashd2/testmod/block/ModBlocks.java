@@ -29,6 +29,10 @@ public class ModBlocks {
             new TinyCubeLightBlock(AbstractBlock.Settings.create().nonOpaque().strength(4f)
                     .requiresTool().sounds(BlockSoundGroup.WOOD)));
 
+    public static final Block LITHIUM_ORE = registerBlock("lithium_ore",
+            new Block(AbstractBlock.Settings.create().strength(4f)
+                    .requiresTool().sounds(BlockSoundGroup.STONE)));
+
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(TestMod.MOD_ID, name), block);
@@ -47,6 +51,7 @@ public class ModBlocks {
             entries.add(RAW_PINK_GARNET_BLOCK);
             entries.add(DICE_BLOCK);
             entries.add(TINY_CUBE_BLOCK);
+            entries.add(LITHIUM_ORE);
         });
     }
 }

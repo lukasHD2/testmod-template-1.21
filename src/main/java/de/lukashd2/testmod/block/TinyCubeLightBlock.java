@@ -2,6 +2,7 @@ package de.lukashd2.testmod.block;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.block.*;
+import net.minecraft.entity.decoration.ArmorStandEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
@@ -15,10 +16,12 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 public class TinyCubeLightBlock extends HorizontalFacingBlock {
-    public static final IntProperty LIGHT_LEVEL = IntProperty.of("light_level", 0, 15);
-
     public static final MapCodec<TinyCubeLightBlock> CODEC = createCodec(TinyCubeLightBlock::new);
     private static final VoxelShape SHAPE = Block.createCuboidShape(4.0, 0.0, 4.0, 12.0, 8.0, 12.0);
+
+    public static final IntProperty LIGHT_LEVEL = IntProperty.of("light_level", 0, 15);
+
+    private ArmorStandEntity armorStandEntity;
 
     public TinyCubeLightBlock(Settings settings) {
         super(settings.luminance(state -> state.get(LIGHT_LEVEL)));
